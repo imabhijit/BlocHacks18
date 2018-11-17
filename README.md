@@ -1,5 +1,5 @@
 # BlocHacks18
-## Technologies Used (MEAN STACKS)
+## Technologies Used (MEAN STACK)
 ##### By Abhijit Gupta 2018
 - **Node.JS 10.13.0**:  https://nodejs.org/en/
 - **Angular 7 CLI**:  https://cli.angular.io/
