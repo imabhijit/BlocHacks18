@@ -8,15 +8,20 @@ import { ContributeComponent } from './contribute/contribute.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatFormFieldModule, MatCardModule} from "@angular/material";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatTabsModule} from "@angular/material/tabs";
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ContributeComponent
+    ContributeComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
+    MatTabsModule,
     AppRoutingModule,
     MatExpansionModule,
     MatFormFieldModule,
