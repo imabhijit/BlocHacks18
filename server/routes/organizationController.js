@@ -13,6 +13,8 @@ mongoose.connect(db, function(err){
     }
 });
 
-router.post();
+router.get('/', function(req, res){
+    res.send('hello world from Organization controller');
+});
 
 module.exports = router;
