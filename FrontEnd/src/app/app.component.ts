@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'appFront';
+
+  links = ['Home', 'Organizations', 'Contribute'];
+  activeLink = this.links[0];
+  background = '';
 }
