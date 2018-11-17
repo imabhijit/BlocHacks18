@@ -1,21 +1,21 @@
 <nav mat-tab-nav-bar mat-align-tabs="start">
-  <a mat-tab-link 
-  routerLink="/home" 
-  routerLinkActive #rla="routerLinkActive" 
+  <a mat-tab-link
+  routerLink="/home"
+  routerLinkActive #rla="routerLinkActive"
   realignInkBar
   [active]="rla.isActive">HOME</a>
 
-  <a mat-tab-link 
+  <a mat-tab-link
   routerLink="/org" 
-  routerLinkActive #rla="routerLinkActive" 
+  routerLinkActive #rla="routerLinkActive"
   realignInkBar
   [active]="rla.isActive">ORGANIZATION</a>
 
-  <a mat-tab-link 
-  routerLink="/contribute" 
-  routerLinkActive #rla="routerLinkActive" 
+  <a mat-tab-link
+  routerLink="/contribute"
+  routerLinkActive #rla="routerLinkActive"
   [active]="rla.isActive">CONTRIBUTE</a>
   <!-- <a mat-tab-link disabled>Disabled Link</a> -->
 </nav>
 
-<router-outlet></router-outlet>
+<app-map></app-map>

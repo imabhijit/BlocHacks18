@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "appFront": {
+    "maptest": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/appFront",
+            "outputPath": "dist/maptest",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -25,7 +25,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/leaflet/leaflet.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -57,18 +59,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "appFront:build"
+            "browserTarget": "maptest:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "appFront:build:production"
+              "browserTarget": "maptest:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "appFront:build"
+            "browserTarget": "maptest:build"
           }
         },
         "test": {
@@ -102,7 +104,7 @@
         }
       }
     },
-    "appFront-e2e": {
+    "maptest-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -111,11 +113,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "appFront:serve"
+            "devServerTarget": "maptest:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "appFront:serve:production"
+              "devServerTarget": "maptest:serve:production"
             }
           }
         },
@@ -131,5 +133,5 @@
       }
     }
   },
-  "defaultProject": "appFront"
+  "defaultProject": "maptest"
 }
