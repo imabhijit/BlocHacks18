@@ -13,8 +13,15 @@ mongoose.connect(db, function(err){
     }
 });
 
-router.get('/', function(req, res){
-    res.send('hello world from API controller');
+router.get('/organizations', function(req, res){
+     Organization.find({}, function(err, orgs){
+        if(err){
+            console.log(err);
+        } else{
+            console.log('retrieved list of names', orgs.length, orgs[0].name);
+            res.status(200).send(JSON.stringify(orgs));
+        }
+    });
 });
 
 router.post('/login', (req, res) => {
