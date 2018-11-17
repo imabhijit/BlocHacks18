@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ContributeComponent } from './contribute/contribute.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatFormFieldModule, MatCardModule} from "@angular/material";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -14,7 +17,11 @@ import { ContributeComponent } from './contribute/contribute.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
