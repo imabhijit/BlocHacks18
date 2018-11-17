@@ -7,14 +7,16 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 
-//Controllers
-var organizationController = require('./routes/organizationController');
+//Controller
+var apicontroller = require('./routes/apiController');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+
+app.use('/api', apicontroller);
 
 app.use(cors());
 app.use(bodyParser.json());
