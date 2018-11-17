@@ -1,8 +1,8 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
-var organizationSchema = new Schema({
+const organizationSchema = new Schema({
     type: String,
     email: String,
     password: String,
@@ -12,4 +12,4 @@ var organizationSchema = new Schema({
     website: String
 });
 
-module.exports = mongoose.model('organization', organizationSchema, 'organization');
+module.exports = mongoose.model('organization', organizationSchema, 'organizations');
