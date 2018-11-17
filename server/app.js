@@ -7,7 +7,8 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 
-
+//Controllers
+var organizationController = require('./routes/organizationController');
 
 var app = express();
 
