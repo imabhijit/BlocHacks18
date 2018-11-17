@@ -1,6 +1,6 @@
-# BlocHacks18
+# BlocHacks 2018
 ## Technologies Used (MEAN STACK)
-##### By Abhijit Gupta 2018
+##### By Abhijit Gupta, Tarek Ait, Ferdousara Parvin, Lara Tran, Hambresoom Baboyan, Viveka Anban
 - **Node.JS 10.13.0**:  https://nodejs.org/en/
 - **Angular 7 CLI**:  https://cli.angular.io/
 
