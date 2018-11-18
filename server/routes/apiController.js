@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const Organization = require('../models/organization');
 const jwt = require('jsonwebtoken');
 const db = "mongodb://blochacks:refugee2018@ds151207.mlab.com:51207/donate-app";
+const Event = require ('../models/Event');
 
 mongoose.connect(db, function(err){
     if(err){
@@ -56,5 +57,29 @@ router.post('/add', (req, res) => {
         }
     })
 });
+
+//Events:
+
+router.post('/org', (req,res) => {
+    let reqEvent = req.body;
+    let event  = new Event(reqEvent);
+    event.save ((err,savedOrg)=> {
+        if(err){
+            console.log(err);
+        }
+        else{
+            res.status(200).send ('made new event'+JSON.stringify((savedOrg)))
+        }
+    })
+})
+router.get('/home',(req,res)=> {
+    let event = {
+        organizer: "Hampic",
+        location: "Baboyan",
+        Time: "ferdo",
+        Description: "VICE"
+    }
+    res.json(event);
+})
 
 module.exports = router;

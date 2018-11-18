@@ -11,7 +11,8 @@ import {MatTabsModule} from "@angular/material/tabs";
 import { MapComponent } from './map/map.component';
 import { OrgComponent } from './org/org.component';
 import {CalendarModule} from "primeng/calendar";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations"
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations"
     HomeComponent,
     ContributeComponent,
     MapComponent,
-    OrgComponent
+    OrgComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,6 @@ declare let L;
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
-
   constructor() {
 
   }
@@ -24,6 +23,17 @@ export class MapComponent implements OnInit {
         iconSize: [20, 20]
       });
       L.marker( [ 45.5017, -73.5673],{icon:myIcon}).addTo(map);
+
+      function makeMarkers(array) {
+        for (var i = 0; i < array.length; i++) {
+          if(!torchArr[i].lat & !array[i].lng){
+            continue;
+          }
+          markers[i] = L.marker( [ array[i].lat, array[i].lng],{icon:myIcon}).addTo(map);
+          markers[i].bindPopup("<p>" + array[i].name+"</p> <p>" + torchArr[i].email+ "</p><p> "+ torchArr[i].tel +"</p>").openPopup();
+
+        }
+      }
 });
   }
 
