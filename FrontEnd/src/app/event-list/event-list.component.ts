@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {EventService} from '../services/event.service';
+import { EventService } from '../services/event.service';
 import { Event } from '@angular/router/src/events';
 
 @Component({
@@ -10,13 +10,15 @@ import { Event } from '@angular/router/src/events';
 export class EventListComponent implements OnInit {
 
   events: Event[];
-  constructor( private eventService: EventService) {}
+  constructor(private eventService: EventService) { }
 
   ngOnInit() {
-    // this.eventService.getByOrganization().subscribe(
-    //   (data => {this.events = data}),
-    //   (err => {console.log(err)})
-    // );
+    this.eventService.getAll().subscribe(data => {
+      this.events = data;
+    },
+      err => {
+        console.log(err);
+      });
 
   }
 

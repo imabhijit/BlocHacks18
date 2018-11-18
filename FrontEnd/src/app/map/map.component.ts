@@ -29,13 +29,14 @@ export class MapComponent implements OnInit {
                       {lat: 45.4931,lng: -73.6489,icon:"assets/bank.ico", name:"MADA Center",location:"6875,  Décarie Montreal, QC H3W 3E4",tel:"514 342 4969",website:"https://www.madacenter.com",email:"mada@madacenter.com",hours:"10:00-17:00"}]
 
   ngOnInit() {
-    this.eventService.getAll().subscribe(
-      (data => {this.events = data}),
-      (err => {console.log(err)})
-    );
+    this.eventService.getAll().subscribe(data => {
+      this.events = data;
 
-
-
+      console.log(this.events);
+    },
+      err => {
+        console.log(err);
+      });
 }
 
 }
