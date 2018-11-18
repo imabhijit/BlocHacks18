@@ -1,6 +1,4 @@
 const mongoose = require('mongoose');
-import { HttpClient } from '@angular/common/http';
-import {Observable} from "rxjs";
 
 const Schema = mongoose.Schema;
 
@@ -10,8 +8,8 @@ const eventSchema = new Schema({
     city: String,
     province: String,
     postalCode: String,
-    startTime: String,
-    endTime: String,
+    startDate: [Date],
+    endDate: [Date],
     Description: String
 });
 

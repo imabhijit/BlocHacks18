@@ -16,7 +16,6 @@ import {CardModule} from 'primeng/card';
 import { FormComponent } from './form/form.component';
 import { EventListComponent } from './event-list/event-list.component';
 import { LoginComponent } from './login/login.component';
-import {MatSelectModule} from '@angular/material/select';
 import { AuthService } from 'src/app/services/auth.service';
 import { AuthGuard } from 'src/app/auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';

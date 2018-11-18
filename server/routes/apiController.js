@@ -68,7 +68,7 @@ router.post('/create', (req,res) => {
             console.log(err);
         }
         else{
-            res.status(200).send('made new event'+JSON.stringify(savedEvent));
+            res.status(200).send(savedEvent);
         }
     })
 });

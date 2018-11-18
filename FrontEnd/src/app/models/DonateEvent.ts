@@ -4,7 +4,7 @@ export interface DonateEvent {
   city: String,
   province: String,
   postalCode: String,
-  startTime: String,
-  endTime: String,
-  Description: String
+  startDate: Date,
+  endDate: Date,
+  description: String
 }
