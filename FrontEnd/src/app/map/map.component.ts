@@ -24,8 +24,7 @@ export class MapComponent implements OnInit {
    marker: markers[] = [{lat: 45.5017,lng: -73.5673},{lat: 45.5025,lng: -73.5713},{lat: 45.4954,lng: -73.5792}] 
 
   ngOnInit() {
-
-    this.eventSetvice.getAll().subscribe(
+    this.eventService.getAll().subscribe(
       (data => {this.events = data}),
       (err => {console.log(err)})
     );
