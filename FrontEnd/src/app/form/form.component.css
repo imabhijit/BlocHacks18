@@ -1,0 +1,15 @@
+.center{
+    text-align: right;
+    width: 50%;
+    margin: auto
+}
+
+th{
+    text-align: left;
+}
+
+#form{
+    display: inline-block;
+    width: 50%;
+    margin: auto
+}

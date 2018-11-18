@@ -13,5 +13,6 @@ export class OrganizationService {
 
   getAll(): Observable<any>{
     return this.http.get(this.baseURL + '/api/organizations');
+
   }
 }
