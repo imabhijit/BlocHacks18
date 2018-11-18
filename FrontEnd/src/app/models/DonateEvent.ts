@@ -7,4 +7,6 @@ export interface DonateEvent {
   startDate: Date,
   endDate: Date,
   description: String
+  lat:String,
+  longitude:String
 }

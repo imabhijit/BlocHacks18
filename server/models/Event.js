@@ -10,7 +10,9 @@ const eventSchema = new Schema({
     postalCode: String,
     startDate: [Date],
     endDate: [Date],
-    Description: String
+    Description: String,
+    lat: String,
+    longitude: String
 });
 
 module.exports = mongoose.model('event', eventSchema, 'events');
