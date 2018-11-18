@@ -5,9 +5,7 @@ const Organization = require('../models/organization');
 const jwt = require('jsonwebtoken');
 const db = "mongodb://blochacks:refugee2018@ds151207.mlab.com:51207/donate-app";
 const Event = require ('../models/Event');
-const googleMapsClient = require('@google/maps').createClient({
-    key: 'AIzaSyBvPsz5VDLGOcny43sYPy61jDAx1l_1zf0'
-});
+
 
 mongoose.connect(db, function(err){
     if(err){
@@ -23,11 +21,11 @@ function verifyToken(req, res, next) {
     }
     let token = req.headers.authorization.split(' ')[1]
     if(token === 'null') {
-      return res.status(401).send('Unauthorized request')    
+      return res.status(401).send('Unauthorized request')
     }
     let payload = jwt.verify(token, 'secretKey')
     if(!payload) {
-      return res.status(401).send('Unauthorized request')    
+      return res.status(401).send('Unauthorized request')
     }
     req._id = payload.subject
     next()
@@ -113,13 +111,7 @@ router.get('/events/:organizer', function(req, res){
         }
     });
 });
-googleMapsClient.geocode({
-    address: '1600 Amphitheatre Parkway, Mountain View, CA'
-}, function(err, response) {
-    if (!err) {
-        console.log(response.json.results);
-    }
-});
+
 
 // router.post('/specificEvents', (req,res) => {
 //     let reqEvent = req.body;
