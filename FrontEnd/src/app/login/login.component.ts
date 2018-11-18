@@ -11,7 +11,6 @@ import { Login } from '../models/Login'
 export class LoginComponent implements OnInit {
 
   loginUserData = {};
-
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {

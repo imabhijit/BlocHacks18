@@ -26,7 +26,7 @@ export class MapComponent implements OnInit {
       }).addTo(map);
 
       var bankIcon = L.icon({
-        iconUrl: 'assets/home.svg',
+        iconUrl: 'assets/bank.svg',
         iconSize: [20, 20]
       });
       var eventIcon = L.icon({

@@ -7,13 +7,15 @@
   </div>
 
   <div class="container">
-    <label for="uname"><b>Username</b></label>
+    <label for="uname"><b>Email</b></label>
     <input type="text" [(ngModel)]="loginUserData.email" placeholder="Enter Username" name="uname" required>
 
     <label for="psw"><b>Password</b></label>
     <input type="password" [(ngModel)]="loginUserData.password" placeholder="Enter Password" name="psw" required>
 
+
     <button (click)="loginUser()">Login</button>
+
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
