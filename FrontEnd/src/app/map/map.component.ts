@@ -14,7 +14,7 @@ export class MapComponent implements OnInit {
   constructor( private eventSetvice: EventService) {
   }
   ngOnInit() {
-    this.eventSetvice.getAll().subscribe(
+    this.eventService.getAll().subscribe(
       (data => {this.events = data}),
       (err => {console.log(err)})
     );
