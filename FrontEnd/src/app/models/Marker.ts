@@ -1,7 +1,7 @@
 export interface Marker{
   lng: number,
   lat: number;
-  icon: String;
+  icon?: String;
   name: String;
   location: String;
   tel: String;

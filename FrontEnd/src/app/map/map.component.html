@@ -3,7 +3,7 @@
 <!-- this creates a google map on the page with the given lat/lng from -->
 <!-- the component as the initial center of the map: -->
 <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-  <agm-marker  *ngFor = "let m of  marker; let i = index"
+  <agm-marker  *ngFor = "let m of marker; let i = index"
   [latitude]="m.lat"
   [longitude]="m.lng"
   [iconUrl] = "'assets/bank.ico'">
@@ -16,17 +16,15 @@
     <p>{{m.hours}}</p>
     </agm-info-window>
   </agm-marker>
-  <agm-marker
+  <agm-marker *ngFor = "let m of events; let i = index"
   [latitude]="lat"
   [longitude]="lng"
   [iconUrl] = "'assets/event.ico'">
   <agm-info-window >
     <h2> {{m.organizer}}</h2>
-    <p> {{m.street}} {{m.city}}{{m.province}}{{postalCode}}</p>
-    <p>{{m.startDate}} to {{endDate}}</p>
+    <p> {{m.street}}, {{m.city}}, {{m.province}}, {{m.postalCode}}</p>
+    <p>{{m.startDate}} to {{m.endDate}}</p>
     <p> {{m.description}}</p>
-    <p>{{m.tel}}</p>
-    <p>{{m.hours}}</p>
     </agm-info-window>
   </agm-marker>
 </agm-map>

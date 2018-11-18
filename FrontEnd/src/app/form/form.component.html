@@ -78,6 +78,24 @@
                   </mat-form-field>
                 </td>
               </tr>
+              <tr>
+                  <th> Latitude: </th>
+                  <td>
+                    <mat-form-field appearance="legacy">
+                      <mat-label>lat</mat-label>
+                      <input matInput name="lat" [(ngModel)]="eventData.lat" placeholder="E.g. 45.4986">
+                    </mat-form-field>
+                  </td>
+                </tr>
+                <tr>
+                    <th> Longitude: </th>
+                    <td>
+                      <mat-form-field appearance="legacy">
+                        <mat-label>lng</mat-label>
+                        <input matInput name="lng" [(ngModel)]="eventData.lng" placeholder="E.g. -73.7498">
+                      </mat-form-field>
+                    </td>
+                  </tr>
             </table>
           </form>
           <p-footer>
