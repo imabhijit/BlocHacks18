@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ContributeComponent } from './contribute/contribute.component';
 import {MatExpansionModule} from '@angular/material/expansion';
-import {MatFormFieldModule, MatCardModule, MatInputModule} from "@angular/material";
+import {MatFormFieldModule, MatCardModule, MatInputModule, MatSelectModule} from "@angular/material";
 import {MatTabsModule} from "@angular/material/tabs";
 import { MapComponent } from './map/map.component';
 import { OrgComponent } from './org/org.component';
@@ -16,7 +16,9 @@ import {CardModule} from 'primeng/card';
 import { FormComponent } from './form/form.component';
 import { EventListComponent } from './event-list/event-list.component';
 import { LoginComponent } from './login/login.component';
-import {MatSelectModule} from '@angular/material/select';
+import { FormControl } from '@angular/forms';
+import {FormsModule} from "@angular/forms";
+
 
 @NgModule({
   declarations: [
@@ -39,10 +41,11 @@ import {MatSelectModule} from '@angular/material/select';
     BrowserAnimationsModule,
     MatCardModule,
     CalendarModule,
-    MatSelectModule
+    MatSelectModule,
     MatInputModule,
     CardModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

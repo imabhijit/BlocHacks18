@@ -6,13 +6,13 @@
             <tr>
               <th> Start: </th>
               <td>
-                <p-calendar value="startDate" formControlName="date" dateFormat="dd/mm/yy" [showIcon]="true" [showTime]="true"></p-calendar>
+                <p-calendar value="startDate" dateFormat="dd/mm/yy" [showIcon]="true" [showTime]="true"></p-calendar>
               </td>
             </tr>
             <tr>
               <th> End: </th>
               <td>
-                <p-calendar value="endDate" formControlName="date" dateFormat="dd/mm/yy" [showIcon]="true" [showTime]="true"></p-calendar>
+                <p-calendar value="endDate" dateFormat="dd/mm/yy" [showIcon]="true" [showTime]="true"></p-calendar>
               </td>
             </tr>
             <tr>
@@ -61,13 +61,11 @@
               </td>
             </tr>
           </table>
-        </div>
+        </div >
         <p-footer>
-          <button pButton type="button" label="Create" icon="pi pi-check" style="margin-right: .25em" (click)="submit()"></button>
+          <button pButton type="submit" label="Create" icon="pi pi-check" style="margin-right: .25em" (click)="submit()"></button>
           <button pButton type="button" label="Cancel" icon="pi pi-times" class="ui-button-secondary" (click)="cancel()"></button>
         </p-footer>
       </p-card>
     </div>
 </div>
-
-<img src="icon.png">

@@ -12,6 +12,7 @@ export class OrganizationService {
   constructor( private http: HttpClient) { }
 
   getAll(): Observable<any>{
-    return this.http.get(this.baseURL+'/api/organizations');
+    return this.http.get(this.baseURL + '/api/organizations');
+
   }
 }

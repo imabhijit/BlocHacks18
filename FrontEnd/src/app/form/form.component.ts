@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+
 
 @Component({
   selector: 'app-form',
@@ -7,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
+  eventData = {};
   startDate: Date;
   endDate: Date;
+
 
   constructor() { 
     this.startDate; 
