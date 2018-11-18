@@ -121,16 +121,4 @@ googleMapsClient.geocode({
     }
 });
 
-// router.post('/specificEvents', (req,res) => {
-//     let reqEvent = req.body;
-//     Event.find({organizer: reqEvent.organizer}, (err, event) => {
-//         if(err){
-//             console.log(err);
-//         } else{
-//             res.status(200).send(event);
-//         }
-
-//     })
-// });
-
 module.exports = router;
