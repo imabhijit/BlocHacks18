@@ -18,6 +18,13 @@ export class MapComponent implements OnInit {
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(map);
+
+      var myIcon = L.icon({
+        iconUrl: 'favicon.ico',
+        iconSize: [20, 20]
+      });
+      L.marker( [ 45.5017, -73.5673],{icon:myIcon}).addTo(map);
+});
   }
 
 }
