@@ -7,19 +7,18 @@ import { HomeComponent } from './home/home.component';
 import { ContributeComponent } from './contribute/contribute.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatFormFieldModule, MatCardModule} from "@angular/material";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatTabsModule} from "@angular/material/tabs";
 import { MapComponent } from './map/map.component';
 import { OrgComponent } from './org/org.component';
 import {CalendarModule} from "primeng/calendar";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations"
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ContributeComponent,
-    MapComponent
+    MapComponent,
     OrgComponent
   ],
   imports: [
@@ -30,7 +29,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations"
     MatExpansionModule,
     MatFormFieldModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
     CalendarModule,
   ],
   providers: [],
