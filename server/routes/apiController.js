@@ -14,7 +14,23 @@ mongoose.connect(db, function(err){
     }
 });
 
-router.get('/organizations', function(req, res){
+function verifyToken(req, res, next) {
+    if(!req.headers.authorization) {
+      return res.status(401).send('Unauthorized request')
+    }
+    let token = req.headers.authorization.split(' ')[1]
+    if(token === 'null') {
+      return res.status(401).send('Unauthorized request')    
+    }
+    let payload = jwt.verify(token, 'secretKey')
+    if(!payload) {
+      return res.status(401).send('Unauthorized request')    
+    }
+    req._id = payload.subject
+    next()
+  }
+
+router.get('/organizations', verifyToken, function(req, res){
      Organization.find({}, function(err, orgs){
         if(err){
             console.log(err);
@@ -83,5 +99,28 @@ router.get('/', function(req, res){
         }
     });
 });
+
+router.get('/events/:organizer', function(req, res){
+    Event.find((req.params), function(err, eve){
+        if(err){
+            console.log(err);
+        } else{
+            console.log('retrieved list of names', eve.length, eve[0].name);
+            res.status(200).send(eve);
+        }
+    });
+});
+
+// router.post('/specificEvents', (req,res) => {
+//     let reqEvent = req.body;
+//     Event.find({organizer: reqEvent.organizer}, (err, event) => {
+//         if(err){
+//             console.log(err);
+//         } else{
+//             res.status(200).send(event);
+//         }
+
+//     })
+// });
 
 module.exports = router;

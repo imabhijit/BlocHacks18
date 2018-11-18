@@ -1,7 +1,8 @@
 .center{
     text-align: right;
     width: 50%;
-    margin: auto
+    margin: auto;
+
 }
 
 th{
@@ -9,7 +10,10 @@ th{
 }
 
 #form{
-    display: inline-block;
-    width: 50%;
-    margin: auto
+  padding-top: 20px;
+  width: 50%;
+  margin: auto
+}
+.cards {
+  margin-bottom: 20px;
 }
