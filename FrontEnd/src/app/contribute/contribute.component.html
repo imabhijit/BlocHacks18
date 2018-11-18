@@ -4,18 +4,6 @@
 </div>
 <mat-card>
   <p style = "margin-bottom: 10px;">There is a total of  <b> {{organizations.length}} </b> Organizations that accepts donations around you:</p>
-  <p>Types:
-    <mat-form-field>
-      <mat-select [(value)]="selected">
-        <mat-option>All</mat-option>
-        <mat-option value="Food">Food</mat-option>
-        <mat-option value="Clothe">Clothe</mat-option>
-        <mat-option value="Furniture">Furniture</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </p>
-  <p>You selected: {{selected}}</p>
-
   <br />
 
     <mat-expansion-panel style = "background-color: #e1e8f0" *ngFor="let org of organizations; let i = index">
@@ -80,4 +68,6 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-  </div>
+    </div>
+</div>
+
