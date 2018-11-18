@@ -1,18 +1,18 @@
 <div class="center">
     <div id="form">
       <p-card header="Create an event!" [style]="{width: '30vw'}">
-        <form>
+        <div>
           <table>
             <tr>
               <th> Start: </th>
               <td>
-                <p-calendar value="startDate" formControlName="date" dateFormat="dd/mm/yy" [showIcon]="true" [showTime]="true"></p-calendar>
+                <p-calendar value="startDate" dateFormat="dd/mm/yy" [showIcon]="true" [showTime]="true"></p-calendar>
               </td>
             </tr>
             <tr>
               <th> End: </th>
               <td>
-                <p-calendar value="endDate" formControlName="date" dateFormat="dd/mm/yy" [showIcon]="true" [showTime]="true"></p-calendar>
+                <p-calendar value="endDate" dateFormat="dd/mm/yy" [showIcon]="true" [showTime]="true"></p-calendar>
               </td>
             </tr>
             <tr>
@@ -61,7 +61,7 @@
               </td>
             </tr>
           </table>
-        </form >
+        </div >
         <p-footer>
           <button pButton type="submit" label="Create" icon="pi pi-check" style="margin-right: .25em" (click)="submit()"></button>
           <button pButton type="button" label="Cancel" icon="pi pi-times" class="ui-button-secondary" (click)="cancel()"></button>
@@ -69,5 +69,3 @@
       </p-card>
     </div>
 </div>
-
-<img src="icon.png">
