@@ -22,11 +22,11 @@ export class MapComponent implements OnInit {
   constructor( private eventService: EventService) {
   }
 
-   marker: Marker[] = [{lat: 45.4812,lng: -73.6949,icon:"assets/bank.ico", info:'<p>Moisson Montréal</p><p>Email</p><p>Location</p><p>Telephone</p><p>Website</p><p>Hours</p>'},
-                      {lat: 45.5500,lng: -73.6497,icon:"assets/bank.ico", info:'<p>LOeuvre des Samaritains</p><p>Email</p><p>Location</p><p>Telephone</p><p>Website</p><p>Hours</p>'},
-                      {lat: 45.5034,lng: -73.7804,icon:"assets/bank.ico", info:'<p>On Rock</p><p>Email</p><p>Location</p><p>Telephone</p><p>Website</p><p>Hours</p>'},
-                      {lat: 45.4941,lng: -73.5781, icon:"assets/bank.ico",info:'<p>The Refugee Center</p><p>Email</p><p>Location</p><p>Telephone</p><p>Website</p><p>Hours</p>'},
-                      {lat: 45.4931,lng: -73.6489,icon:"assets/bank.ico", info:'<p>MADA Center</p><p>Email</p><p>Location</p><p>Telephone</p><p>Website</p><p>Hours</p>'}]
+   marker: Marker[] = [{lat: 45.4812,lng: -73.6949,icon:"assets/bank.ico", info:"Moisson Montréal"},
+                      {lat: 45.5500,lng: -73.6497,icon:"assets/bank.ico", info:"LOeuvre des Samaritains"},
+                      {lat: 45.5034,lng: -73.7804,icon:"assets/bank.ico", info:"On Rock"},
+                      {lat: 45.4941,lng: -73.5781, icon:"assets/bank.ico",info:"The Refugee Center"},
+                      {lat: 45.4931,lng: -73.6489,icon:"assets/bank.ico", info:"MADA Center"}]
 
   ngOnInit() {
     this.eventService.getAll().subscribe(
