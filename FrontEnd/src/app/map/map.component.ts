@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {EventService} from "../services/event.service";
+import {DonateEvent} from "../models/DonateEvent";
 declare let L;
 
 @Component({
@@ -7,11 +9,16 @@ declare let L;
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
-  constructor() {
 
+  events: DonateEvent[];
+  constructor( private eventSetvice: EventService) {
   }
-
   ngOnInit() {
+    this.eventSetvice.getAll().subscribe(
+      (data => {this.events = data}),
+      (err => {console.log(err)})
+    );
+
       const map = L.map('map').setView([45.5017, -73.5673], 11);
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

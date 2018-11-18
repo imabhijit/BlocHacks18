@@ -1,10 +1,15 @@
 const mongoose = require('mongoose');
+import { HttpClient } from '@angular/common/http';
+import {Observable} from "rxjs";
 
 const Schema = mongoose.Schema;
 
 const eventSchema = new Schema({
     organizer:String,
-    location: String,
+    street: String,
+    city: String,
+    province: String,
+    postalCode: String,
     startTime: String,
     endTime: String,
     Description: String

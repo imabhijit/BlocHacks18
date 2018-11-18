@@ -23,11 +23,12 @@ export class FormComponent implements OnInit {
   }
 
   submit(){
-    console.log("form submitted");
+    console.log(this.eventData);
+
   }
 
   cancel(){
-    console.log("form cancelled");
+    console.log(this.eventData);
   }
 
 }
