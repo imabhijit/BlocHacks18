@@ -39,7 +39,7 @@ import {MatSelectModule} from '@angular/material/select';
     BrowserAnimationsModule,
     MatCardModule,
     CalendarModule,
-    MatSelectModule
+    MatSelectModule,
     MatInputModule,
     CardModule,
     HttpClientModule
