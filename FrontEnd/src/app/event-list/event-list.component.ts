@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {EventService} from '../services/event.service';
+import { Event } from '@angular/router/src/events';
 
 @Component({
   selector: 'app-event-list',
@@ -8,10 +9,11 @@ import {EventService} from '../services/event.service';
 })
 export class EventListComponent implements OnInit {
 
+  events: Event[];
   constructor( private eventService: EventService) {}
 
   ngOnInit() {
-    this.eventService.getSpecificEvents().subscribe(
+    this.eventService.getByOrganization().subscribe(
       (data => {this.events = data}),
       (err => {console.log(err)})
     );
