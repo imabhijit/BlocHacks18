@@ -27,7 +27,7 @@ router.get('/organizations', function(req, res){
 
 router.post('/login', (req, res) => {
     let requestData = req.body;
-    organization.findOne({email: requestData.email}, (err, organization) => {
+    Organization.findOne({email: requestData.email}, (err, organization) => {
         if (err) {
             console.log(err);
         } else {
@@ -60,26 +60,28 @@ router.post('/add', (req, res) => {
 
 //Events:
 
-router.post('/org', (req,res) => {
+router.post('/event', (req,res) => {
     let reqEvent = req.body;
     let event  = new Event(reqEvent);
-    event.save ((err,savedOrg)=> {
+    event.save((err,savedEvent)=> {
         if(err){
             console.log(err);
         }
         else{
-            res.status(200).send ('made new event'+JSON.stringify((savedOrg)))
+            res.status(200).send('made new event'+JSON.stringify(savedEvent));
         }
     })
-})
-router.get('/home',(req,res)=> {
-    let event = {
-        organizer: "Hampic",
-        location: "Baboyan",
-        Time: "ferdo",
-        Description: "VICE"
-    }
-    res.json(event);
-})
+});
+
+router.get('/', function(req, res){
+    Event.find({}, function(err, eve){
+        if(err){
+            console.log(err);
+        } else{
+            console.log('retrieved list of names', eve.length, eve[0].name);
+            res.status(200).send(eve);
+        }
+    });
+});
 
 module.exports = router;

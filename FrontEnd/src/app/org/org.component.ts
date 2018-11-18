@@ -7,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrgComponent implements OnInit {
 
-  date: Date;
-  constructor() { this.date;}
+  constructor() { }
 
   ngOnInit() {
   }
