@@ -6,7 +6,7 @@ import { EventService } from '../services/event.service';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  styleUrls: ['./form.component.css'],
 })
 export class FormComponent implements OnInit {
 
@@ -23,10 +23,12 @@ export class FormComponent implements OnInit {
   submit() {
     this.donateEvent = this.eventData as DonateEvent;
     this.eventService.create(this.donateEvent).subscribe();
+    alert("SUCCESS: EVENT CREATED");
     this.refresh();
   }
 
   cancel() {
+    alert("ACTION CANCELLED");
     this.refresh();
   }
 
