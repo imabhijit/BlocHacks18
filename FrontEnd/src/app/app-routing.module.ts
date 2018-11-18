@@ -4,6 +4,7 @@ import { HomeComponent } from "./home/home.component";
 import { OrgComponent } from "./org/org.component";
 import {ContributeComponent} from "./contribute/contribute.component";
 import { AuthGuard } from 'src/app/auth.guard';
+import {LoginComponent} from "./login/login.component";
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'org', component: OrgComponent, canActivate: [AuthGuard] }, // change the module name if needed and import the module
   { path: 'contribute', component: ContributeComponent }, // ditto
+  { path: 'login', component: LoginComponent}
 ];
 
 @NgModule({

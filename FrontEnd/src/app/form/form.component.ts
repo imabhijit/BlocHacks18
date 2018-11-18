@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+
 
 @Component({
   selector: 'app-form',
@@ -7,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
+  eventData = {};
   startDate: Date;
   endDate: Date;
+
 
   constructor() { 
     this.startDate; 
@@ -19,11 +23,12 @@ export class FormComponent implements OnInit {
   }
 
   submit(){
-    console.log("form submitted");
+    console.log(this.eventData);
+
   }
 
   cancel(){
-    console.log("form cancelled");
+    console.log(this.eventData);
   }
 
 }

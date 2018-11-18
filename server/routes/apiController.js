@@ -60,7 +60,7 @@ router.post('/add', (req, res) => {
 
 //Events:
 
-router.post('/event', (req,res) => {
+router.post('/create', (req,res) => {
     let reqEvent = req.body;
     let event  = new Event(reqEvent);
     event.save((err,savedEvent)=> {

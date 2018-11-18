@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ContributeComponent } from './contribute/contribute.component';
 import {MatExpansionModule} from '@angular/material/expansion';
-import {MatFormFieldModule, MatCardModule, MatInputModule} from "@angular/material";
+import {MatFormFieldModule, MatCardModule, MatInputModule, MatSelectModule} from "@angular/material";
 import {MatTabsModule} from "@angular/material/tabs";
 import { MapComponent } from './map/map.component';
 import { OrgComponent } from './org/org.component';
@@ -20,6 +20,8 @@ import {MatSelectModule} from '@angular/material/select';
 import { AuthService } from 'src/app/services/auth.service';
 import { AuthGuard } from 'src/app/auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
+import { FormControl } from '@angular/forms';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import { TokenInterceptorService } from './token-interceptor.service';
     MatSelectModule,
     MatInputModule,
     CardModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [AuthService, AuthGuard,
     {
