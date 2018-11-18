@@ -18,7 +18,6 @@ export class FormComponent implements OnInit {
   }
 
   ngOnInit() {
-
   }
 
   submit() {

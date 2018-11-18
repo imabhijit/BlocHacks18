@@ -4,12 +4,12 @@
     <mat-tab label="View Events">
 
   <p>You have  planned</p>
-      <mat-card class = "cards">
+      <mat-card class = "cards" *ngFor="let event of events; let i = index">
         <mat-card-header>
           <div mat-card-avatar class="example-header-image">
             <i class="fas fa-calendar-alt"></i>
           </div>
-          <mat-card-title>Event 1</mat-card-title>
+          <mat-card-title>{{event.type}}</mat-card-title>
           <mat-card-subtitle>important event</mat-card-subtitle>
         </mat-card-header>
 
