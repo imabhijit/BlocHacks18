@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const Organization = require('../models/organization');
 const jwt = require('jsonwebtoken');
 const db = "mongodb://blochacks:refugee2018@ds151207.mlab.com:51207/donate-app";
+const Event = require ('../models/Event');
 
 mongoose.connect(db, function(err){
     if(err){
@@ -19,14 +20,14 @@ router.get('/organizations', function(req, res){
             console.log(err);
         } else{
             console.log('retrieved list of names', orgs.length, orgs[0].name);
-            res.status(200).send(JSON.stringify(orgs));
+            res.status(200).send(orgs);
         }
     });
 });
 
 router.post('/login', (req, res) => {
     let requestData = req.body;
-    organization.findOne({email: requestData.email}, (err, organization) => {
+    Organization.findOne({email: requestData.email}, (err, organization) => {
         if (err) {
             console.log(err);
         } else {
@@ -55,6 +56,32 @@ router.post('/add', (req, res) => {
             res.status(200).send('made new organization: '+JSON.stringify(savedOrg));
         }
     })
+});
+
+//Events:
+
+router.post('/event', (req,res) => {
+    let reqEvent = req.body;
+    let event  = new Event(reqEvent);
+    event.save((err,savedEvent)=> {
+        if(err){
+            console.log(err);
+        }
+        else{
+            res.status(200).send('made new event'+JSON.stringify(savedEvent));
+        }
+    })
+});
+
+router.get('/', function(req, res){
+    Event.find({}, function(err, eve){
+        if(err){
+            console.log(err);
+        } else{
+            console.log('retrieved list of names', eve.length, eve[0].name);
+            res.status(200).send(eve);
+        }
+    });
 });
 
 module.exports = router;
