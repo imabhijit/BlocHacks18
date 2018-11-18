@@ -20,7 +20,7 @@ router.get('/organizations', function(req, res){
             console.log(err);
         } else{
             console.log('retrieved list of names', orgs.length, orgs[0].name);
-            res.status(200).send(JSON.stringify(orgs));
+            res.status(200).send(orgs);
         }
     });
 });
