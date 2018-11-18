@@ -22,7 +22,11 @@ export class MapComponent implements OnInit {
   constructor( private eventService: EventService) {
   }
 
-   marker: Marker[] = [{lat: 45.5017,lng: -73.5673},{lat: 45.5025,lng: -73.5713},{lat: 45.4954,lng: -73.5792}]
+   marker: Marker[] = [{lat: 45.4812,lng: -73.6949,icon:"assets/bank.ico", info:'<p>Moisson Montréal</p><p>Email</p><p>Location</p><p>Telephone</p><p>Website</p><p>Hours</p>'},
+                      {lat: 45.5500,lng: -73.6497,icon:"assets/bank.ico", info:'<p>LOeuvre des Samaritains</p><p>Email</p><p>Location</p><p>Telephone</p><p>Website</p><p>Hours</p>'},
+                      {lat: 45.5034,lng: -73.7804,icon:"assets/bank.ico", info:'<p>On Rock</p><p>Email</p><p>Location</p><p>Telephone</p><p>Website</p><p>Hours</p>'},
+                      {lat: 45.4941,lng: -73.5781, icon:"assets/bank.ico",info:'<p>The Refugee Center</p><p>Email</p><p>Location</p><p>Telephone</p><p>Website</p><p>Hours</p>'},
+                      {lat: 45.4931,lng: -73.6489,icon:"assets/bank.ico", info:'<p>MADA Center</p><p>Email</p><p>Location</p><p>Telephone</p><p>Website</p><p>Hours</p>'}]
 
   ngOnInit() {
     this.eventService.getAll().subscribe(

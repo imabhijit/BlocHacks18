@@ -5,5 +5,8 @@
 <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
   <agm-marker  *ngFor = "let m of  marker; let i = index"
   [latitude]="m.lat"
-  [longitude]="m.lng"></agm-marker>
+  [longitude]="m.lng"
+  [iconUrl] = "m.icon">
+
+  </agm-marker>
 </agm-map>
