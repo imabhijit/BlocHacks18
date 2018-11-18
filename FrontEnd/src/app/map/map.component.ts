@@ -10,12 +10,15 @@ declare let L;
 })
 export class MapComponent implements OnInit {
 
+  zoom: number = 12;
   lat: number = 45.5017;
   lng: number = -73.5673;
+
 
   events: DonateEvent[];
   constructor( private eventSetvice: EventService) {
   }
+
   ngOnInit() {
     this.eventSetvice.getAll().subscribe(
       (data => {this.events = data}),
