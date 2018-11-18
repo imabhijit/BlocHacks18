@@ -10,6 +10,9 @@ import {MatFormFieldModule, MatCardModule} from "@angular/material";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatTabsModule} from "@angular/material/tabs";
 import { MapComponent } from './map/map.component';
+import { OrgComponent } from './org/org.component';
+import {CalendarModule} from "primeng/calendar";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations"
 
 @NgModule({
   declarations: [
@@ -17,6 +20,7 @@ import { MapComponent } from './map/map.component';
     HomeComponent,
     ContributeComponent,
     MapComponent
+    OrgComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,7 @@ import { MapComponent } from './map/map.component';
     MatFormFieldModule,
     BrowserAnimationsModule,
     MatCardModule
+    CalendarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
