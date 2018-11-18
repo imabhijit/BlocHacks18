@@ -12,7 +12,7 @@ import { MapComponent } from './map/map.component';
 import { OrgComponent } from './org/org.component';
 import {CalendarModule} from "primeng/calendar";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { LoginComponent } from './login/login/login.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
