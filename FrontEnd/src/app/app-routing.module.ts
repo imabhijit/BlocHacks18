@@ -8,7 +8,7 @@ import {ContributeComponent} from "./contribute/contribute.component";
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'org', component: OrgComponent }, //change the module name if needed and import the module
+  { path: 'org', component: OrgComponent }, // change the module name if needed and import the module
   { path: 'contribute', component: ContributeComponent }, // ditto
 ];
 
