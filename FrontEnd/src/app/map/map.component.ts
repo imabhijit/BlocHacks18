@@ -16,7 +16,7 @@ export class MapComponent implements OnInit {
 
 
   events: DonateEvent[];
-  constructor( private eventSetvice: EventService) {
+  constructor( private eventService: EventService) {
   }
 
   ngOnInit() {
