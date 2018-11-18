@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { DonateEvent } from '../models/DonateEvent';
+import { EventService } from '../services/event.service';
 
 
 @Component({
@@ -9,25 +10,22 @@ import { FormControl } from '@angular/forms';
 })
 export class FormComponent implements OnInit {
 
-  eventData = {};
-  startDate: Date;
-  endDate: Date;
+  eventData:any = {};
+  donateEvent: DonateEvent;
 
 
-  constructor() { 
-    this.startDate; 
-    this.endDate;
+  constructor(private eventService: EventService) {
   }
 
   ngOnInit() {
   }
 
-  submit(){
-    console.log(this.eventData);
-
+  submit() {
+    this.donateEvent = this.eventData as DonateEvent;
+    this.eventService.create(this.donateEvent).subscribe();
   }
 
-  cancel(){
+  cancel() {
     console.log(this.eventData);
   }
 

@@ -1,19 +1,21 @@
 <div class = "content">
 
 <h2 style = "text-align: center;">Login Form</h2>
-<form action="">
+<form>
   <div class="imgcontainer">
     <img class="center" src="../../assets/login.jpg" style = " max-width: 20%; max-height: 20%;"/>
   </div>
 
   <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <label for="uname"><b>Email</b></label>
+    <input type="text" [(ngModel)]="loginUserData.email" placeholder="Enter Username" name="uname" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" [(ngModel)]="loginUserData.password" placeholder="Enter Password" name="psw" required>
 
-    <button type="submit" onclick="loginUser()">Login</button>
+
+    <button (click)="loginUser()">Login</button>
+
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>

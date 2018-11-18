@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
+import { Login } from '../models/Login'
 
 @Component({
   selector: 'app-login',
@@ -8,11 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  loginUserData = {
-    'email': 'aa@email.com',
-    'password': '1234'
- };
 
+  loginUserData = {};
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
@@ -20,6 +18,8 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser() {
+    this.loginUserData = this.loginUserData as Login;
+    console.log(this.loginUserData);
     this.authService.loginUser(this.loginUserData)
     .subscribe(
       res => {
