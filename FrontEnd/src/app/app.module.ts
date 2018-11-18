@@ -21,6 +21,7 @@ import { AuthGuard } from 'src/app/auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
 import { FormControl } from '@angular/forms';
 import {FormsModule} from "@angular/forms";
+import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import {FormsModule} from "@angular/forms";
     MatInputModule,
     CardModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatStepperModule
   ],
   providers: [AuthService, AuthGuard,
     {

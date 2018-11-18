@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {OrganizationService} from "../services/organization.service";
 import {Organization} from "../models/Organization";
 
+
 @Component({
   selector: 'app-contribute',
   templateUrl: './contribute.component.html',
