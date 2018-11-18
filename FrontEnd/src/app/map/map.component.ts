@@ -20,7 +20,7 @@ export class MapComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.eventSetvice.getAll().subscribe(
+    this.eventService.getAll().subscribe(
       (data => {this.events = data}),
       (err => {console.log(err)})
     );

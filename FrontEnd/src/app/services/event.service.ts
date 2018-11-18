@@ -17,6 +17,10 @@ export class EventService {
 
   }
 
+  getByOrganization(): Observable<any>{
+    return this.http.get(this.baseURL + '/api/specificEvents');
+  }
+
   create(eventObj: DonateEvent): Observable<any>{
     return this.http.post(this.baseURL + '/api/create', eventObj);
   }
