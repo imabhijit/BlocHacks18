@@ -6,12 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ContributeComponent } from './contribute/contribute.component';
 import {MatExpansionModule} from '@angular/material/expansion';
-import {MatFormFieldModule, MatCardModule} from "@angular/material";
+import {MatFormFieldModule, MatCardModule, MatInputModule} from "@angular/material";
 import {MatTabsModule} from "@angular/material/tabs";
 import { MapComponent } from './map/map.component';
 import { OrgComponent } from './org/org.component';
 import {CalendarModule} from "primeng/calendar";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations"
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {CardModule} from 'primeng/card';
+import { FormComponent } from './form/form.component';
+import { EventListComponent } from './event-list/event-list.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations"
     HomeComponent,
     ContributeComponent,
     MapComponent,
-    OrgComponent
+    OrgComponent,
+    FormComponent,
+    EventListComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +36,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations"
     BrowserAnimationsModule,
     MatCardModule,
     CalendarModule,
+    MatInputModule,
+    CardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
