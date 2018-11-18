@@ -10,7 +10,7 @@ import { EventService } from '../services/event.service';
 })
 export class FormComponent implements OnInit {
 
-  eventData:any = {};
+  eventData: any = {};
   donateEvent: DonateEvent;
 
 
@@ -23,10 +23,15 @@ export class FormComponent implements OnInit {
   submit() {
     this.donateEvent = this.eventData as DonateEvent;
     this.eventService.create(this.donateEvent).subscribe();
+    this.refresh();
   }
 
   cancel() {
-    console.log(this.eventData);
+    this.refresh();
+  }
+
+  refresh() {
+    window.location.reload();
   }
 
 }
