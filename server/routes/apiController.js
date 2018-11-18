@@ -27,17 +27,19 @@ router.get('/organizations', function(req, res){
 
 router.post('/login', (req, res) => {
     let requestData = req.body;
-    organization.findOne({email: requestData.email}, (err, organization) => {
+    //let organization = new Organization(requestData);
+    Organization.findOne({email: requestData.email}, (err, loggedOrg) => {
         if (err) {
             console.log(err);
         } else {
-            if (!organization) {
+            if (!loggedOrg) {
                 res.status(401).send('Invalid Email');
             } else
-            if ( organization.password !== requestData.password) {
+            if ( loggedOrg.password !== requestData.password) {
                 res.status(401).send('Invalid Password');
             } else {
-                let payload = {subject: organization._id};
+                //res.status(200).send('made new organization: '+JSON.stringify(loggedOrg));
+                let payload = {subject: loggedOrg._id};
                 let token = jwt.sign(payload, 'secretKey');
                 res.status(200).send({token});
             }
