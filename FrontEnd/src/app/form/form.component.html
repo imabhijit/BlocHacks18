@@ -1,82 +1,129 @@
+<div style = "background-color: #333333; min-height: 750px">
 <div class="center">
-  <div id="form">
-    <p-card header="Create an event!" [style]="{width: '30vw'}">
-      <form>
-        <table>
-          <tr>
-            <th> Name: </th>
-            <td>
-              <mat-form-field appearance="legacy">
-                <mat-label>Name</mat-label>
-                <input matInput name="name" [(ngModel)]="eventData.organizer" placeholder="e.g Food Bank Name">
-              </mat-form-field>
-            </td>
-          </tr>
-          <tr>
-            <th> Start: </th>
-            <td>
-              <p-calendar name="startDate" [(ngModel)]="eventData.startDate" dateFormat="dd/mm/yy" [showIcon]="true"
-                [showTime]="true"></p-calendar>
-            </td>
-          </tr>
-          <tr>
-            <th> End: </th>
-            <td>
-              <p-calendar name="endDate" [(ngModel)]="eventData.endDate" dateFormat="dd/mm/yy" [showIcon]="true"
-                [showTime]="true"></p-calendar>
-            </td>
-          </tr>
-          <tr>
-            <th> Description: </th>
-            <td>
-              <mat-form-field appearance="legacy">
-                <mat-label>Description</mat-label>
-                <input matInput name="description" [(ngModel)]="eventData.description" placeholder="E.g. Non perishable foods will be distributed">
-              </mat-form-field>
-            </td>
-          </tr>
-          <tr>
-            <th> Street: </th>
-            <td>
-              <mat-form-field appearance="legacy">
-                <mat-label>Street</mat-label>
-                <input matInput name="street" [(ngModel)]="eventData.street" placeholder="E.g. 200 rue Notre-Dame">
-              </mat-form-field>
-            </td>
-          </tr>
-          <tr>
-            <th> City: </th>
-            <td>
-              <mat-form-field appearance="legacy">
-                <mat-label>City</mat-label>
-                <input matInput name="city" [(ngModel)]="eventData.city" placeholder="E.g. Montreal">
-              </mat-form-field>
-            </td>
-          </tr>
-          <tr>
-            <th> Province: </th>
-            <td>
-              <mat-form-field appearance="legacy">
-                <mat-label>Province</mat-label>
-                <input matInput name="province" [(ngModel)]="eventData.province" placeholder="E.g. QC">
-              </mat-form-field>
-            </td>
-          </tr>
-          <tr>
-            <th> Postal code: </th>
-            <td>
-              <mat-form-field appearance="legacy">
-                <mat-label>Postal code</mat-label>
-                <input matInput name="postalCode" [(ngModel)]="eventData.postalCode" placeholder="E.g. H3K 2T1">
-              </mat-form-field>
-            </td>
-          </tr>
-        </table>
-      </form>
-      <p-footer>
-        <button pButton type="submit" label="Create" icon="pi pi-check" style="margin-right: .25em" (click)="submit()"></button>
-        <button pButton type="submit" label="Cancel" icon="pi pi-times" class="ui-button-secondary" (click)="cancel()"></button>
-      </p-footer>
-    </p-card>
-  </div>
+  <mat-tab-group>
+    <mat-tab label="View Events">
+
+  <p>You have  planned</p>
+      <mat-card class = "cards">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <mat-card-title>Event 1</mat-card-title>
+          <mat-card-subtitle>important event</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+          <p>
+
+          </p>
+        </mat-card-content>
+      </mat-card>
+
+
+
+
+
+    </mat-tab>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <mat-tab label="Host new event" class = "-align-center">
+      <div id="form">
+        <p-card header="Create an event!" [style]="{width: '30vw'}">
+          <form>
+            <table>
+              <tr>
+                <th> Name: </th>
+                <td>
+                  <mat-form-field appearance="legacy">
+                    <mat-label>Name</mat-label>
+                    <input matInput name="name" [(ngModel)]="eventData.organizer" placeholder="e.g Food Bank Name">
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <th> Start: </th>
+                <td>
+                  <p-calendar name="startDate" [(ngModel)]="eventData.startDate" dateFormat="dd/mm/yy" [showIcon]="true"
+                              [showTime]="true"></p-calendar>
+                </td>
+              </tr>
+              <tr>
+                <th> End: </th>
+                <td>
+                  <p-calendar name="endDate" [(ngModel)]="eventData.endDate" dateFormat="dd/mm/yy" [showIcon]="true"
+                              [showTime]="true"></p-calendar>
+                </td>
+              </tr>
+              <tr>
+                <th> Description: </th>
+                <td>
+                  <mat-form-field appearance="legacy">
+                    <mat-label>Description</mat-label>
+                    <input matInput name="description" [(ngModel)]="eventData.description" placeholder="E.g. Non perishable foods will be distributed">
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <th> Street: </th>
+                <td>
+                  <mat-form-field appearance="legacy">
+                    <mat-label>Street</mat-label>
+                    <input matInput name="street" [(ngModel)]="eventData.street" placeholder="E.g. 200 rue Notre-Dame">
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <th> City: </th>
+                <td>
+                  <mat-form-field appearance="legacy">
+                    <mat-label>City</mat-label>
+                    <input matInput name="city" [(ngModel)]="eventData.city" placeholder="E.g. Montreal">
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <th> Province: </th>
+                <td>
+                  <mat-form-field appearance="legacy">
+                    <mat-label>Province</mat-label>
+                    <input matInput name="province" [(ngModel)]="eventData.province" placeholder="E.g. QC">
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <th> Postal code: </th>
+                <td>
+                  <mat-form-field appearance="legacy">
+                    <mat-label>Postal code</mat-label>
+                    <input matInput name="postalCode" [(ngModel)]="eventData.postalCode" placeholder="E.g. H3K 2T1">
+                  </mat-form-field>
+                </td>
+              </tr>
+            </table>
+          </form>
+          <p-footer>
+            <button pButton type="submit" label="Create" icon="pi pi-check" style="margin-right: .25em" (click)="submit()"></button>
+            <button pButton type="submit" label="Cancel" icon="pi pi-times" class="ui-button-secondary" (click)="cancel()"></button>
+          </p-footer>
+        </p-card>
+      </div>
+    </mat-tab>
+
+  </mat-tab-group>
+
+</div>
 </div>
