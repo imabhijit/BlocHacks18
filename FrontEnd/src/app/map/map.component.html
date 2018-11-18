@@ -21,10 +21,9 @@
   [longitude]="lng"
   [iconUrl] = "'assets/event.ico'">
   <agm-info-window >
-    <h2> {{m.organizer}}</h2>
+    <h2> {{m.description}}</h2>
     <p> {{m.street}}, {{m.city}}, {{m.province}}, {{m.postalCode}}</p>
     <p>{{m.startDate}} to {{m.endDate}}</p>
-    <p> {{m.description}}</p>
     </agm-info-window>
   </agm-marker>
 </agm-map>
