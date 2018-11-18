@@ -9,7 +9,8 @@ const organizationSchema = new Schema({
     name: String,
     location: String,
     tel: String,
-    website: String
+    website: String,
+    hours: [String]
 });
 
 module.exports = mongoose.model('organization', organizationSchema, 'organizations');
