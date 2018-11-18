@@ -18,22 +18,38 @@ export class MapComponent implements OnInit {
           attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(map);
 
-      var myIcon = L.icon({
-        iconUrl: 'favicon.ico',
+      var bankIcon = L.icon({
+        iconUrl: 'assets/home.svg',
         iconSize: [20, 20]
       });
-      L.marker( [ 45.5017, -73.5673],{icon:myIcon}).addTo(map);
+      var eventIcon = L.icon({
+        iconUrl: 'assets/event.svg',
+        iconSize: [20, 20]
+      });
+      L.marker( [ 45.5017, -73.5673],{icon:bankIcon}).addTo(map).bindPopup("<p>I'm a food bank</p>");
+      L.marker( [45.4954, -73.5792],{icon:eventIcon}).addTo(map).bindPopup("<p>I'm an event</p>");
 
-      // function makeMarkers(array) {
+      // function makeBankMarkers(array) {
       //   for (var i = 0; i < array.length; i++) {
-      //     if(!torchArr[i].lat & !array[i].lng){
+      //     if(!array[i].lat & !array[i].lng){
       //       continue;
       //     }
-      //     markers[i] = L.marker( [ array[i].lat, array[i].lng],{icon:myIcon}).addTo(map);
-      //     markers[i].bindPopup("<p>" + array[i].name+"</p> <p>" + torchArr[i].email+ "</p><p> "+ torchArr[i].tel +"</p>").openPopup();
-
+      //     markers[i] = L.marker( [ array[i].lat, array[i].lng],{icon:bankIcon}).addTo(map);
+      //     markers[i].bindPopup("<p>" + array[i].name+"</p> <p>" + array[i].email+ "</p><p> "+ array[i].tel +"</p>");
+      //
       //   }
       // }
-    }
-}
+      // function makeEventMarkers(array) {
+      //   for (var i = 0; i < array.length; i++) {
+      //     if(!array[i].lat & !array[i].lng){
+      //       continue;
+      //     }
+      //     markers[i] = L.marker( [ array[i].lat, array[i].lng],{icon:eventIcon}).addTo(map);
+      //     markers[i].bindPopup("<p>" + array[i].organizer+"</p> <p>" + array[i].location+ "</p><p> "+ array[i].time +"</p><p> "+ array[i].description +"</p>");
+      //
+      //   }
+      // }
+});
+  }
 
+}
