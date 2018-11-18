@@ -2,6 +2,7 @@
   <a mat-tab-link routerLink="/home" routerLinkActive #home="routerLinkActive" realignInkBar [active]="home.isActive">HOME</a>
   <a mat-tab-link routerLink="/org" routerLinkActive #org="routerLinkActive" realignInkBar [active]="org.isActive">ORGANIZATION</a>
   <a mat-tab-link routerLink="/contribute" routerLinkActive #contribute="routerLinkActive" [active]="contribute.isActive">CONTRIBUTE</a>
-  <a mat-tab-link routerLink="/login" routerLinkActive #login="routerLinkActive" [active]="login.isActive">LOGIN</a>
+  <a  id = "login" mat-tab-link routerLink="/login" routerLinkActive #login="routerLinkActive" [active]="login.isActive">LOGIN</a>
+  <a hidden id = "logout" mat-tab-link routerLink="/logout" routerLinkActive #logout="routerLinkActive" onclick="" >LOGOUT</a>
 </nav>
 <router-outlet></router-outlet>
