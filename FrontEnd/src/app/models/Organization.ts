@@ -5,5 +5,6 @@ export interface Organization {
   name: String,
   location: String,
   tel: String,
-  website: String
+  website: String,
+  hours: String[]
 }
