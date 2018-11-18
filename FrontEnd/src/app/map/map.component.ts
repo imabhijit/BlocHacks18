@@ -7,7 +7,6 @@ declare let L;
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
-
   constructor() {
 
   }
