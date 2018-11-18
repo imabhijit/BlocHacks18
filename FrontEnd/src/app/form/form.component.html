@@ -2,43 +2,8 @@
 <div class="center">
   <mat-tab-group>
     <mat-tab label="View Events">
-
-  <p>You have  planned</p>
-      <mat-card class = "cards" *ngFor="let event of events; let i = index">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image">
-            <i class="fas fa-calendar-alt"></i>
-          </div>
-          <mat-card-title>{{event.type}}</mat-card-title>
-          <mat-card-subtitle>important event</mat-card-subtitle>
-        </mat-card-header>
-
-        <mat-card-content>
-          <p>
-
-          </p>
-        </mat-card-content>
-      </mat-card>
-
-
-
-
-
+      <app-event-list></app-event-list>
     </mat-tab>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <mat-tab label="Host new event" class = "-align-center">
       <div id="form">
