@@ -19,7 +19,7 @@ export class EventService {
   }
 
   getByOrganization(): Observable<any>{
-    return this.http.get(this.baseURL + '/api/events/+login.email');
+    return this.http.get(this.baseURL + '/api/events/this.Login.email');
   }
 
   create(eventObj: DonateEvent): Observable<any>{

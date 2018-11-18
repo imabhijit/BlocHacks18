@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -11,4 +12,6 @@ export class AppComponent {
   links = ['Home', 'Organizations', 'Contribute'];
   activeLink = this.links[0];
   background = '';
+
+  constructor(private authService: AuthService){}
 }
