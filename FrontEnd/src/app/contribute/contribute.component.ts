@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {OrganizationService} from "../services/organization.service";
+import {Organization} from "../models/Organization";
 
 @Component({
   selector: 'app-contribute',
@@ -7,11 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContributeComponent implements OnInit {
 
-  panelOpenState = false;
+  organizations: Organization[];
 
-  constructor() { }
+  constructor(private organizationService: OrganizationService) {
+  }
 
   ngOnInit() {
+    this.organizationService.getAll().subscribe(data => {
+      this.organizations = data;
+    },
+      err =>{
+      console.log(err);
+      });
   }
 
 }
