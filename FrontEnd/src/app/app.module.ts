@@ -16,7 +16,9 @@ import {CardModule} from 'primeng/card';
 import { FormComponent } from './form/form.component';
 import { EventListComponent } from './event-list/event-list.component';
 import { LoginComponent } from './login/login.component';
-import {MatSelectModule} from '@angular/material/select';
+import { FormControl } from '@angular/forms';
+import {FormsModule} from "@angular/forms";
+
 
 @NgModule({
   declarations: [
@@ -39,10 +41,10 @@ import {MatSelectModule} from '@angular/material/select';
     BrowserAnimationsModule,
     MatCardModule,
     CalendarModule,
-    MatSelectModule
     MatInputModule,
     CardModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

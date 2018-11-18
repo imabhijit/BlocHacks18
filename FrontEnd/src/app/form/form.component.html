@@ -1,7 +1,7 @@
 <div class="center">
     <div id="form">
       <p-card header="Create an event!" [style]="{width: '30vw'}">
-        <div>
+        <form>
           <table>
             <tr>
               <th> Start: </th>
@@ -61,9 +61,9 @@
               </td>
             </tr>
           </table>
-        </div>
+        </form >
         <p-footer>
-          <button pButton type="button" label="Create" icon="pi pi-check" style="margin-right: .25em" (click)="submit()"></button>
+          <button pButton type="submit" label="Create" icon="pi pi-check" style="margin-right: .25em" (click)="submit()"></button>
           <button pButton type="button" label="Cancel" icon="pi pi-times" class="ui-button-secondary" (click)="cancel()"></button>
         </p-footer>
       </p-card>
