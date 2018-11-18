@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ContributeComponent } from './contribute/contribute.component';
 import {MatExpansionModule} from '@angular/material/expansion';
-import {MatFormFieldModule, MatCardModule, MatInputModule} from "@angular/material";
+import {MatFormFieldModule, MatCardModule, MatInputModule, MatSelectModule} from "@angular/material";
 import {MatTabsModule} from "@angular/material/tabs";
 import { MapComponent } from './map/map.component';
 import { OrgComponent } from './org/org.component';
@@ -41,6 +41,7 @@ import {FormsModule} from "@angular/forms";
     BrowserAnimationsModule,
     MatCardModule,
     CalendarModule,
+    MatSelectModule,
     MatInputModule,
     CardModule,
     HttpClientModule,
