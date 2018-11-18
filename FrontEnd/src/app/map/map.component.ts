@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {EventService} from "../services/event.service";
 import {DonateEvent} from "../models/DonateEvent";
-import { Marker } from '../models/marker';
+import { Marker } from '../models/Marker';
 declare let L;
 
 @Component({
