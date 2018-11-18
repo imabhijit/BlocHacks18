@@ -1,14 +1,20 @@
 <h1>Contributors page</h1>
+<div>
+  <img class="center" src="../../assets/help.png"/>
+</div>
 <mat-card>
-  <p style = "margin-bottom: 10px;">There is a total of {{organizations.length}} Organizations that accepts donations around you:</p>
-  <mat-form-field>
-    <mat-select [(value)]="selected">
-      <mat-option>None</mat-option>
-      <mat-option value="option1">Option 1</mat-option>
-      <mat-option value="option2">Option 2</mat-option>
-      <mat-option value="option3">Option 3</mat-option>
-    </mat-select>
-  </mat-form-field>
+  <p style = "margin-bottom: 10px;">There is a total of  <b> {{organizations.length}} </b> Organizations that accepts donations around you:</p>
+  <p>Types:
+    <mat-form-field>
+      <mat-select [(value)]="selected">
+        <mat-option>All</mat-option>
+        <mat-option value="option1">Food</mat-option>
+        <mat-option value="option2">Clothe</mat-option>
+        <mat-option value="option3">Furniture</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </p>
+  <p>You selected: {{selected}}</p>
 
   <br />
 
