@@ -18,7 +18,7 @@ export class MapComponent implements OnInit {
 
 
   events: DonateEvent[];
-  constructor( private eventSetvice: EventService) {
+  constructor( private eventService: EventService) {
   }
 
    marker: markers[] = [{lat: 45.5017,lng: -73.5673},{lat: 45.5025,lng: -73.5713},{lat: 45.4954,lng: -73.5792}] 
