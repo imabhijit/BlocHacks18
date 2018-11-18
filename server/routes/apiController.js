@@ -31,7 +31,7 @@ function verifyToken(req, res, next) {
     next()
   }
 
-router.get('/organizations', verifyToken, function(req, res){
+router.get('/organizations', function(req, res){
      Organization.find({}, function(err, orgs){
         if(err){
             console.log(err);
