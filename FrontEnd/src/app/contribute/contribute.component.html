@@ -5,7 +5,35 @@
 <mat-card>
   <p style = "margin-bottom: 10px;">There is a total of  <b> {{organizations.length}} </b> Organizations that accepts donations around you:</p>
   <br />
+  <p>how:</p>
+  <mat-expansion-panel style = "margin-bottom: 30px;">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <i class="far fa-question-circle"></i>
+        <b style = "text-indent: 50px;">Process description </b>
+      </mat-panel-title>
+      <mat-panel-description>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class = "description-of-organization">
+      <ol>
+        <li>
+          <p>Gather everything that you want to donate</p>
+        </li>
+        <li>
+          <p>Chose the organization you want to donate to </p>
+        <li>
+          <p>present yourself at the location with the donations</p>
+        </li>
+        <li>
+          <p>A confirmation of your donation will be sent via email</p>
+        </li>
 
+      </ol>
+
+    </div>
+  </mat-expansion-panel>
+  <p>Where:</p>
     <mat-expansion-panel style = "background-color: #e1e8f0" *ngFor="let org of organizations; let i = index">
       <mat-expansion-panel-header>
         <mat-panel-title>
@@ -31,7 +59,7 @@
     </mat-expansion-panel>
 </mat-card>
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div style = "margin-bottom: 20px;" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -39,7 +67,7 @@
       </ol>
       <div class="carousel-inner ">
         <div class="carousel-item active">
-          <img class = "carousel-picture" src="../../assets/proof.jpg"/>
+          <img class = "carousel-picture" src="../../assets/proof2.jpg"/>
           <div class="carousel-caption d-none d-md-block">
             <h5>Everything given helps refugees in need</h5>
             <p>Thank you for your kindness!</p>
@@ -48,15 +76,15 @@
         <div class="carousel-item">
           <img class = "carousel-picture" src="../../assets/proof.jpg"/>
           <div class="carousel-caption d-none d-md-block">
-            <h5>...</h5>
-            <p>...</p>
+            <h5>Everything given helps refugees in need</h5>
+            <p>Thank you for your kindness!</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img class = "carousel-picture" src="../../assets/proof.jpg"/>
+          <img class = "carousel-picture" src="../../assets/proof3.jpg"/>
           <div class="carousel-caption d-none d-md-block">
-            <h5>...</h5>
-            <p>...</p>
+            <h5>Everything given helps refugees in need</h5>
+            <p>Thank you for your kindness!</p>
           </div>
         </div>
       </div>
