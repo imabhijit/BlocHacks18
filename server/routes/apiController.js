@@ -100,16 +100,27 @@ router.get('/', function(req, res){
     });
 });
 
-router.post('/specificEvents', (req,res) => {
-    let reqEvent = req.body;
-    Event.find({organizer: reqEvent.organizer}, (err, event) => {
+router.get('/events/:organizer', function(req, res){
+    Event.find((req.params), function(err, eve){
         if(err){
             console.log(err);
         } else{
-            res.status(200).send(event);
+            console.log('retrieved list of names', eve.length, eve[0].name);
+            res.status(200).send(eve);
         }
-
-    })
+    });
 });
+
+// router.post('/specificEvents', (req,res) => {
+//     let reqEvent = req.body;
+//     Event.find({organizer: reqEvent.organizer}, (err, event) => {
+//         if(err){
+//             console.log(err);
+//         } else{
+//             res.status(200).send(event);
+//         }
+
+//     })
+// });
 
 module.exports = router;
