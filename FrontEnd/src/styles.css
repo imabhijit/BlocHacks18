@@ -4,7 +4,8 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import "../node_modules/font-awesome/css/font-awesome.min.css";
 @import "../node_modules/primeng/resources/primeng.min.css";
-@import "../node_modules/primeng/resources/themes/darkness/theme.scss";
+@import "../node_modules/primeng/resources/themes/bootstrap/theme.css";
+@import "../node_modules/primeicons/primeicons.css";
 
 
 body {
