@@ -8,4 +8,11 @@
 body {
   background-color: #66003E;
 }
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 10%;
+  width: 10%;
+}
 

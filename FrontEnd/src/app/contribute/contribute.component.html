@@ -1,6 +1,23 @@
 <h1>Contributors page</h1>
+<div>
+  <img class="center" src="../../assets/help.png"/>
+</div>
 <mat-card>
-  Organizations that accepts donations around you:
+  <p style = "margin-bottom: 10px;">There is a total of  <b> {{organizations.length}} </b> Organizations that accepts donations around you:</p>
+  <p>Types:
+    <mat-form-field>
+      <mat-select [(value)]="selected">
+        <mat-option>All</mat-option>
+        <mat-option value="option1">Food</mat-option>
+        <mat-option value="option2">Clothe</mat-option>
+        <mat-option value="option3">Furniture</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </p>
+  <p>You selected: {{selected}}</p>
+
+  <br />
+
   <mat-accordion>
 
     <mat-expansion-panel *ngFor="let org of organizations; let i = index">
@@ -19,10 +36,13 @@
         <br />
         email: {{org.email}}
         <br />
-        tel: {{org.tel}}
+        telephone: {{org.tel}}
         <br />
         email: {{org.email}}
         <br />
         Type of Donations accepted: {{org.type}}
+        <br />
+        website: <a>{{org.website}}</a>
+        <a href="url">link text</a>
       </p>
     </mat-expansion-panel>
