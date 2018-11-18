@@ -22,6 +22,7 @@ import { TokenInterceptorService } from './token-interceptor.service';
 import { FormControl } from '@angular/forms';
 import {FormsModule} from "@angular/forms";
 import {AgmCoreModule} from '@agm/core';
+import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import {AgmCoreModule} from '@agm/core';
     AgmCoreModule.forRoot({
   apiKey: 'AIzaSyBvPsz5VDLGOcny43sYPy61jDAx1l_1zf0'
 })
+    MatStepperModule
   ],
   providers: [AuthService, AuthGuard,
     {
