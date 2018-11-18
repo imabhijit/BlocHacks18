@@ -6,7 +6,7 @@
   <agm-marker  *ngFor = "let m of  marker; let i = index"
   [latitude]="m.lat"
   [longitude]="m.lng"
-  [iconUrl] = "m.icon">
+  [iconUrl] = "'assets/bank.ico'">
   <agm-info-window >
     <h2> {{m.name}}</h2>
     <p> {{m.location}}</p>
@@ -14,8 +14,19 @@
     <p> {{m.email}}</p>
     <p>{{m.tel}}</p>
     <p>{{m.hours}}</p>
-
     </agm-info-window>
-
+  </agm-marker>
+  <agm-marker
+  [latitude]="lat"
+  [longitude]="lng"
+  [iconUrl] = "'assets/event.ico'">
+  <agm-info-window >
+    <h2> {{m.organizer}}</h2>
+    <p> {{m.street}} {{m.city}}{{m.province}}{{postalCode}}</p>
+    <p>{{m.startDate}} to {{endDate}}</p>
+    <p> {{m.description}}</p>
+    <p>{{m.tel}}</p>
+    <p>{{m.hours}}</p>
+    </agm-info-window>
   </agm-marker>
 </agm-map>
