@@ -1,3 +1,7 @@
+/* div {
+  background-color: #b4b4b4;
+} */
+
 .description-of-organization {
   min-height: 50px;
 }
@@ -6,7 +10,7 @@
   width: 25px;
 }
 .mainBlock {
-  background-color: white;
+  background-color: #b4b4b4;;
 }
 .center {
   display: block;
