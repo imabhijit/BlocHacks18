@@ -49,9 +49,6 @@ import {MatStepperModule} from '@angular/material/stepper';
     CardModule,
     HttpClientModule,
     FormsModule,
-    AgmCoreModule.forRoot({
-  apiKey: 'AIzaSyBvPsz5VDLGOcny43sYPy61jDAx1l_1zf0'
-}),
     MatStepperModule,
   ],
   providers: [AuthService, AuthGuard,
